@@ -30,3 +30,7 @@ jobs:
     - name: Check coverage
       run: |
         coverage report --fail-under=100
+        
+    - name: Run tests with coverage
+      run: |
+        pytest --cov=module4-calculator/app module4-calculator/tests/

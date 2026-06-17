@@ -5,6 +5,9 @@ This test module contains unit tests for the 'app/calculator.py' module.
 Each test demonstrates good testing practices using the Arrange-Act-Assert (AAA) pattern.
 """
 
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 from io import StringIO
 

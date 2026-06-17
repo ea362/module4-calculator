@@ -3,6 +3,9 @@
 # and now we are telling the computer, "Go and find that calculator tool for us."
 # The "app" part is like a folder, and inside that folder, there's another file called "calculator.py",
 # which has the tool (function) called "calculator" that we need.
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from app.calculator import calculator
 
 # This part of the code is super important! It checks if this file is being run directly by the computer.

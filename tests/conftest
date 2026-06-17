@@ -1,6 +1,8 @@
 # tests/conftest.py
-
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pytest
+
 from app.calculation import CalculationFactory
 from app.calculation import (
     AddCalculation,

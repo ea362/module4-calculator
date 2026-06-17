@@ -11,6 +11,9 @@ Tests are organized following the AAA (Arrange, Act, Assert) pattern and adhere
 to PEP8 standards for code style and formatting.
 """
 
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 from app.operation import Operation
 
