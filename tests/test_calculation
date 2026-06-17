@@ -488,6 +488,16 @@ def test_calculation_repr_representation_division():
     assert calc_repr == expected_repr
 
 
+def test_factory_duplicate_registration_error():
+    """Ensure duplicate registration raises ValueError."""
+    from app.calculation import Calculation, CalculationFactory
+
+    with pytest.raises(ValueError):
+        @CalculationFactory.register_calculation("add")
+        class AnotherAdd(Calculation):
+            def execute(self):
+                return 0
+
 # -----------------------------------------------------------------------------------
 # Parameterized Tests for Execute Method
 # -----------------------------------------------------------------------------------

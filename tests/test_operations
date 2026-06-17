@@ -340,6 +340,13 @@ def test_division_with_zero_numerator():
     assert result == expected_result, f"Expected {a} / {b} to be {expected_result}, got {result}"
 
 
+def test_division_by_zero_raises_error():
+    """Ensure Operation.division raises ZeroDivisionError."""
+    from app.operation import Operation
+    with pytest.raises(ZeroDivisionError):
+        Operation.division(10, 0)
+
+
 # -----------------------------------------------------------------------------------
 # Test Invalid Input Types (Negative Testing)
 # -----------------------------------------------------------------------------------
